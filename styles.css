@@ -24,17 +24,96 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-flow: row wrap;
     width: 30%;
+    padding-top: 3%;
 }
 
 .row2 {
-    width:100%;
-    background-color: lightblue;
-    flex: 2;
+    width:65%;
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.column {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+.column.one, .column.three {
+    align-items: center;
+}
+
+.column.two {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .boldText {
     font-weight: 600;
-    font-size: 24px;
     color: hsl(234, 12%, 34%);
+}
+
+.card {
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    padding: 8px;
+    box-shadow: 0px 3px 6px 0px #888888;
+}
+
+.card p {
+    margin: 5% 5% 0 5%;
+    font-size: 15px;
+}
+
+.card .boldText {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#supervisor {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+#teamBuilder {
+    border-top: 4px solid hsl(0, 78%, 62%)
+}
+
+#karma {
+    border-top: 4px solid hsl(34, 97%, 64%)
+}
+
+#calculator {
+    border-top: 4px solid hsl(212, 86%, 64%)
+}
+
+.card img {
+    width: 50px;
+    position: relative;
+    float: right;
+    padding-right: 10%;
+    padding-top: 10%;
+}
+
+@media all and (max-width: 500px) {
+    .row1 {
+        width: 100%;
+        
+    }
+    .row2 {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .column.two {
+        width: 100%;
+    }
 }
